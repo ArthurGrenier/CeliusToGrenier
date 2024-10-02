@@ -1,0 +1,40 @@
+body {
+  background-color: black;
+  color: aliceblue;
+  text-shadow: #FFF 1px 0 10px;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.inputCelsius {
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  font-size: 1.2rem;
+  border-radius: 0.2rem;
+  margin: 1rem auto;
+  padding: 1rem 1.2rem;
+}
+
+.submit {
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  font-size: 1.2rem;
+  border-radius: 0.2rem;
+  margin: 1rem auto;
+  padding: 1rem 1.2rem;
+}
+
+#result {
+  margin-top: 20px;
+  padding: 10px;
+  color: #d3d3d3;
+  font-size: 3rem;
+  font-weight: bold;
+}
