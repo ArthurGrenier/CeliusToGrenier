@@ -15,19 +15,12 @@ function convert() {
 }
 
 function convertToCustomScale(celsius) {
-  const referenceLow = -196; // Température de référence basse
-  const referenceHigh = -71.15; // Température de référence haute
-  const intervalPerDivision = (referenceHigh - referenceLow) / 10; // Intervalle par division
-  const intervalPerSubdivision = intervalPerDivision / 7; // Intervalle par subdivision
+  const T_b = -196; // Température basse en °C
+  const intervalleTotal = 124.85; // Intervalle total en °C
+  const nombreTotalSubdivisions = 77; // Nombre total de subdivisions (11 divisions principales * 7 subdivisions)
 
-  // Calculer E
-  const adjustedTemperature = celsius + 196; // Ajuster la température
-  const wholeDivisions = Math.floor(adjustedTemperature / intervalPerDivision); // Partie entière
-  const remainder = adjustedTemperature % intervalPerDivision; // Reste
+  // Calcul de la conversion
+  const grenier = ((celsius - T_b) / intervalleTotal) * nombreTotalSubdivisions;
 
-  const fractionalPart = remainder / intervalPerSubdivision; // Partie fractionnaire
-  const customScaleValue = wholeDivisions + fractionalPart; // Valeur sur l'échelle personnalisée
-
-  console.log(customScaleValue)
-  return customScaleValue;
+  return grenier;
 }
